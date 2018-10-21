@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    android:weightSum="1"
+    tools:context="com.example.got28.tabs.Cliente">
+
+    <ImageButton
+        android:id="@+id/btnAdd"
+        android:layout_width="57dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="280dp"
+        android:layout_weight="0.07"
+        android:background="@drawable/edit_btn"
+        android:backgroundTint="?attr/colorPrimary"
+        android:src="@drawable/ic_person"
+        android:text="agregar"
+        tools:ignore="ContentDescription,HardcodedText,ObsoleteLayoutParam,RtlHardcoded" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Agregar"
+        android:layout_marginLeft="280dp"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
+    <TextView
+        android:id="@+id/listadeclientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:text="Lista de clientes"
+        android:textSize="30dp"
+        tools:ignore="HardcodedText,SpUsage" />
+
+
+    <ListView
+        android:id="@+id/listaClientes"
+        android:layout_width="match_parent"
+        android:layout_height="245dp"
+        android:layout_weight="0.54"
+        tools:ignore="ObsoleteLayoutParam" />
+
+</LinearLayout>

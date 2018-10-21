@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Editar Cliente"
+        android:textSize="18sp"
+        android:id="@+id/textView3"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        tools:ignore="HardcodedText" />
+
+    <EditText
+        android:id="@+id/edit_nombre"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/edit_txt"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:textColorLink="@android:color/holo_red_light"
+        android:textCursorDrawable="@android:color/holo_red_light"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <EditText
+        android:id="@+id/edit_telefono"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_alignStart="@+id/edit_nombre"
+        android:layout_below="@+id/edit_nombre"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/edit_txt"
+        android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
+        android:hint="Teléfono"
+        android:inputType="text|phone"
+        android:paddingLeft="30dp"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textColorHighlight="@android:color/holo_red_light"
+        android:textColorHint="@color/common_google_signin_btn_text_light_default"
+        android:textColorLink="@android:color/holo_red_light"
+        android:textSize="18sp"
+        tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
+
+    <Button
+        android:id="@+id/btn_actualizar"
+        android:layout_width="90dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/edit_telefono"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="21dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:background="@drawable/edit_btn"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Actualizar"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/btn_cancelar"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:background="@drawable/edit_btn"
+        android:backgroundTint="?android:attr/colorControlNormal"
+        android:text="Cancelar"
+        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+        android:textColorLink="@android:color/holo_red_light"
+        android:layout_alignTop="@+id/btn_actualizar"
+        android:layout_toStartOf="@+id/textView3"
+        tools:ignore="HardcodedText" />
+
+</RelativeLayout>

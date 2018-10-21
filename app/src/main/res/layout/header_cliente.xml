@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:stretchColumns="*">
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_column="0"
+            android:background="@color/colorAccent"
+            android:gravity="left"
+            android:padding="10sp"
+            android:text="Nombre"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_column="1"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorAccent"
+            android:gravity="left"
+            android:padding="10sp"
+            android:text="Telefono"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+        <TextView
+            android:layout_column="2"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorAccent"
+            android:gravity="left"
+            android:padding="10sp"
+            android:text="Acciones"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+
+    </TableRow>
+</TableLayout>
