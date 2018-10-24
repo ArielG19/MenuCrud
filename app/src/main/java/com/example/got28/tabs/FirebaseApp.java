@@ -22,4 +22,8 @@ public class FirebaseApp extends android.app.Application{
     public static void initializeApp(Cuentas cuentas) {
 
     }
+
+    public static void initializeApp(Venta venta) {
+
+    }
 }

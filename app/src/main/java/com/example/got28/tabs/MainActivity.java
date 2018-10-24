@@ -51,11 +51,11 @@ public class MainActivity extends AppCompatActivity {
             //Creamos una instancia para retornar cada fragment
             switch (position) {
                 case 0:
-                    Cuentas cuentasFragment = new Cuentas();
-                    return cuentasFragment;
-                case 1:
                     Venta ventaFragment = new Venta();
                     return ventaFragment;
+                case 1:
+                    Cuentas cuentasFragment = new Cuentas();
+                    return cuentasFragment;
                 case 2:
                     Cliente clienteFragment = new Cliente();
                     return clienteFragment;
@@ -73,9 +73,9 @@ public class MainActivity extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "Cuentas";
-                case 1:
                     return "Ventas";
+                case 1:
+                    return "Cuentas";
                 case 2:
                     return "Clientes";
             }

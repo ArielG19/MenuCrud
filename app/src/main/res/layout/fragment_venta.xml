@@ -5,64 +5,74 @@
     android:layout_height="match_parent"
     tools:context="com.example.got28.tabs.Venta">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="match_parent"
+    <AutoCompleteTextView
+        android:id="@+id/autoComplete"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="26dp"
+        android:hint="Buscar cliente.."
+        android:drawableRight="@drawable/ic_search"
+        android:textColorHint="@android:color/holo_blue_light"
+        tools:ignore="HardcodedText,LabelFor,RtlHardcoded"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/fecha"
+        android:layout_toStartOf="@+id/imageSpeech"
+        android:layout_alignEnd="@+id/fecha" />
 
     <EditText
         android:id="@+id/fecha"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtspeech"
-        android:layout_below="@+id/spinner"
-        android:layout_marginTop="54dp"
+        android:drawableRight="@drawable/ic_calendar"
+        android:layout_marginTop="32dp"
         android:ems="10"
         android:hint="Escribir fecha"
         android:inputType="textPersonName"
-        tools:ignore="HardcodedText,LabelFor" />
+        android:textColorHint="@android:color/holo_blue_light"
+        tools:ignore="HardcodedText,LabelFor,RtlHardcoded"
+        android:layout_below="@+id/autoComplete"
+        android:layout_alignStart="@+id/txtspeech"
+        android:layout_alignEnd="@+id/imageSpeech" />
 
     <EditText
         android:id="@+id/txtspeech"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/fecha"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="34dp"
+        android:drawableRight="@drawable/ic_commet"
+        android:layout_marginTop="29dp"
         android:ems="10"
         android:hint="Detalle venta"
         android:inputType="textMultiLine"
-        tools:ignore="HardcodedText,LabelFor" />
+        android:textColorHint="@android:color/holo_blue_light"
+        tools:ignore="HardcodedText,LabelFor,RtlHardcoded"
+        android:layout_marginStart="33dp"
+        android:layout_below="@+id/fecha"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:id="@+id/total"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/txtspeech"
-        android:layout_alignStart="@+id/txtspeech"
-        android:layout_below="@+id/txtspeech"
-        android:layout_marginTop="26dp"
-        android:hint="Total a pagar"
+        android:layout_below="@+id/imageSpeech"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:hint="Total"
         android:inputType="number"
-        tools:ignore="HardcodedText,LabelFor" />
+        android:textColorHint="@android:color/holo_blue_light"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:id="@+id/btGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/txtspeech"
+        android:layout_alignTop="@+id/total"
+        android:layout_marginTop="74dp"
+        android:background="@android:color/holo_blue_light"
         android:text="Guardar"
-        android:layout_marginTop="65dp"
-        android:layout_below="@+id/total"
-        android:layout_alignEnd="@+id/total"
-        android:layout_marginEnd="61dp"
-        tools:ignore="HardcodedText" />
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        tools:ignore="HardcodedText"
+        android:layout_alignEnd="@+id/imageSpeech" />
 
     <ImageButton
         android:id="@+id/imageSpeech"
@@ -70,29 +80,17 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_speech"
         tools:ignore="ContentDescription"
-        android:layout_alignBottom="@+id/txtspeech"
-        android:layout_toEndOf="@+id/txtspeech"
-        android:layout_marginStart="36dp" />
+        android:layout_alignTop="@+id/txtspeech"
+        android:layout_alignEnd="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="Presione"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText"
         android:layout_above="@+id/imageSpeech"
-        android:layout_marginStart="13dp"
-        android:layout_toEndOf="@+id/txtspeech"
-        android:text="Presione aquí"
-        android:textStyle="bold"
-        tools:ignore="HardcodedText" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Seleccionar Cliente"
-        android:textStyle="bold"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        tools:ignore="HardcodedText" />
+        android:layout_toEndOf="@+id/txtspeech" />
 </RelativeLayout>

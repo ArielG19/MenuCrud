@@ -41,6 +41,9 @@ public class Persona {
 
     @Override
     public String toString() {
-        return Nombre  + Telefono;
+        //solo retornamos nombre para que nuestro spinner muestre solo el nombre
+        return Nombre;
+        //si queremos mas datos en lsit view o spinner que no son personalizados
+        // debemos hacer esto return Nombre  + Telefono;
     }
 }
