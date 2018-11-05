@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:descendantFocusability="blocksDescendants">
 
     <TextView
@@ -14,6 +14,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_centerVertical="true"
         android:layout_marginStart="11dp"
         android:layout_weight="0.03"
+        android:text="nombre"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,ObsoleteLayoutParam" />
@@ -26,16 +27,20 @@ xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_marginStart="67dp"
         android:layout_toEndOf="@+id/mostrar_nombre"
         android:layout_weight="0.03"
+        android:text="telefono"
         android:textSize="14sp"
         android:textStyle="bold"
         tools:ignore="HardcodedText,ObsoleteLayoutParam" />
 
-    <ImageButton
-        android:id="@+id/eliminarCliente"
+    <com.varunest.sparkbutton.SparkButton
+        android:id="@+id/spark_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginLeft="260dp"
-        android:background="@android:color/transparent"
-        android:src="@drawable/ic_eliminar"
-        tools:ignore="ContentDescription,RtlHardcoded"/>
+        app:sparkbutton_activeImage="@drawable/ic_eliminar"
+        app:sparkbutton_animationSpeed="0.5"
+        app:sparkbutton_iconSize="40dp"
+        app:sparkbutton_primaryColor="@android:color/holo_blue_bright"
+        app:sparkbutton_secondaryColor="@color/colorAccent"
+        tools:ignore="RtlHardcoded" />
 </RelativeLayout>

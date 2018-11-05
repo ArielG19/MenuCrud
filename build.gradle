@@ -16,7 +16,8 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
-        maven { url 'https://maven.google.com' } //add this code
+        maven { url 'https://maven.google.com' }
+        maven { url "https://jitpack.io" }//add this code para button animation
         jcenter()
     }
 }

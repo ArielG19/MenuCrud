@@ -2,7 +2,6 @@ package com.example.got28.tabs;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -25,6 +24,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.varunest.sparkbutton.SparkButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +48,7 @@ public class Cliente extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
         // Para poder llamar un activity desde el framente tenemos que usar el view y retornarlo al final
         View view = inflater.inflate(R.layout.fragment_cliente, container, false);
+
         Agregar = (ImageButton) view.findViewById(R.id.btnAdd);
         listaV = (ListView) view.findViewById(R.id.listaClientes);
 
@@ -139,7 +140,11 @@ public class Cliente extends Fragment {
 
             TextView nombre_text = view.findViewById(R.id.mostrar_nombre);
             TextView telefo_txt = view.findViewById(R.id.mostrar_telefono);
-            ImageButton btn_eliminar = view.findViewById(R.id.eliminarCliente);
+
+           SparkButton  btn_eliminar = (SparkButton) view.findViewById(R.id.spark_button);
+            //iniciamos la inimacion y q elimine a la vez
+           btn_eliminar.playAnimation();
+            //ImageButton btn_eliminar = view.findViewById(R.id.eliminarCliente);
             //varibale tipo persona, la cual obtiene la posicion del modelo para poder eliminar
             final Persona temp = listPerson.get(position);
 
@@ -223,8 +228,8 @@ public class Cliente extends Fragment {
         View dialogView = inflater.inflate(R.layout.edit_layout_cliente, null);//asignas el xml que deseas llamar
         builder.setView(dialogView);
 
-        final EditText ed_nombre = dialogView.findViewById(R.id.edit_nombre);
-        final EditText ed_telefono = dialogView.findViewById(R.id.edit_telefono);
+        final EditText ed_nombre = dialogView.findViewById(R.id.c_cliente);
+        final EditText ed_telefono = dialogView.findViewById(R.id.c_total);
 
         //llenamos nuestros edit text con los datos a editar
         ed_nombre.setText(personaSeleccionada.getNombre());//nombre de tu lista
@@ -232,7 +237,7 @@ public class Cliente extends Fragment {
 
 
         //bontones para guardar o cancelar ---------------------------------------------------------------
-        final Button buttonAcept = dialogView.findViewById(R.id.btn_actualizar);
+        final Button buttonAcept = dialogView.findViewById(R.id.c_actualizar);
         final Button buttonDimiss = dialogView.findViewById(R.id.btn_cancelar);
 
         alert =builder.show();//con esto mustras el dialogo en pantalla

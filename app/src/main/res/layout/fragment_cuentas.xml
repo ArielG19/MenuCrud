@@ -4,12 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="12dp"
-    tools:context="com.example.got28.tabs.Cuentas">
+    tools:context="com.example.got28.tabs.Cuentas"
+    android:weightSum="1">
 
     <!-- TODO: Update blank fragment layout -->
 
+    <EditText
+        android:id="@+id/c_buscador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableRight="@drawable/ic_search"
+        android:hint="Buscar cuenta"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/holo_blue_light"
+        tools:ignore="HardcodedText,RtlHardcoded" />
+
     <ListView
         android:id="@+id/listV2"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="245dp"/>
+        android:layout_height="391dp" />
 </LinearLayout>

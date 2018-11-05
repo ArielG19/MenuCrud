@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical" android:layout_width="match_parent"
+android:layout_height="match_parent">
+
     <TextView
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:text="Editar Cliente"
-        android:textSize="18sp"
-        android:id="@+id/textView3"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="Editar Cuenta"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
     <EditText
@@ -23,7 +26,7 @@
         android:layout_marginTop="11dp"
         android:background="@drawable/edit_txt"
         android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
-        android:hint="Nombre"
+        android:hint="Cliente"
         android:inputType="textPersonName"
         android:paddingLeft="30dp"
         android:textColor="@color/common_google_signin_btn_text_light_default"
@@ -42,7 +45,7 @@
         android:layout_marginTop="13dp"
         android:background="@drawable/edit_txt"
         android:backgroundTint="@color/common_google_signin_btn_text_dark_disabled"
-        android:hint="Teléfono"
+        android:hint="Total"
         android:inputType="text|phone"
         android:paddingLeft="30dp"
         android:textColor="@color/common_google_signin_btn_text_light_default"
@@ -52,22 +55,22 @@
         android:textSize="18sp"
         tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
-    <Button
-        android:id="@+id/c_actualizar"
-        android:layout_width="90dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/c_total"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="21dp"
-        android:layout_toEndOf="@+id/textView3"
-        android:background="@drawable/edit_btn"
-        android:backgroundTint="@color/colorAccent"
-        android:text="Actualizar"
-        android:textColor="@color/common_google_signin_btn_text_dark_pressed"
-        tools:ignore="HardcodedText" />
+<Button
+    android:id="@+id/c_actualizar"
+    android:layout_width="90dp"
+    android:layout_height="30dp"
+    android:background="@drawable/edit_btn"
+    android:backgroundTint="@color/colorAccent"
+    android:text="Actualizar"
+    android:textColor="@color/common_google_signin_btn_text_dark_pressed"
+    tools:ignore="HardcodedText"
+    android:layout_marginTop="33dp"
+    android:layout_marginBottom="20dp"
+    android:layout_below="@+id/c_descripcion"
+    android:layout_alignEnd="@+id/c_descripcion" />
 
     <Button
-        android:id="@+id/btn_cancelar"
+        android:id="@+id/c_cancelar"
         android:layout_width="80dp"
         android:layout_height="30dp"
         android:background="@drawable/edit_btn"
@@ -75,8 +78,20 @@
         android:text="Cancelar"
         android:textColor="@color/common_google_signin_btn_text_dark_pressed"
         android:textColorLink="@android:color/holo_red_light"
+        tools:ignore="HardcodedText"
         android:layout_alignTop="@+id/c_actualizar"
-        android:layout_toStartOf="@+id/textView3"
-        tools:ignore="HardcodedText" />
+        android:layout_alignStart="@+id/c_descripcion" />
+
+    <EditText
+        android:id="@+id/c_descripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:layout_marginTop="27dp"
+        android:hint="Descripción"
+        android:inputType="textMultiLine"
+        tools:ignore="HardcodedText"
+        android:layout_below="@+id/c_total"
+        android:layout_alignStart="@+id/c_total"
+        android:layout_alignEnd="@+id/c_total" />
 
 </RelativeLayout>
